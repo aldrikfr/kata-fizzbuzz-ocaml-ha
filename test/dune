@@ -1,0 +1,4 @@
+(tests
+ (names testfizzbuzz)
+ (libraries oUnit fizzbuzz)
+ (action (run %{test})))
