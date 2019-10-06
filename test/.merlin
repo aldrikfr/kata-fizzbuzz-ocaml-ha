@@ -9,8 +9,8 @@ B /home/aldrik/.opam/4.08.1+flambda/lib/ounit2
 B /home/aldrik/.opam/4.08.1+flambda/lib/ounit2/advanced
 B /home/aldrik/.opam/4.08.1+flambda/lib/sexplib0
 B /home/aldrik/.opam/4.08.1+flambda/lib/stdlib-shims
-B ../../../../_build/default/kata/ocaml/fizzbuzz/src/.fizzbuzz.objs/byte
-B ../../../../_build/default/kata/ocaml/fizzbuzz/test/.testfizzbuzz.eobjs/byte
+B ../_build/default/src/.fizzbuzz.objs/byte
+B ../_build/default/test/.testfizzbuzz.eobjs/byte
 S /home/aldrik/.opam/4.08.1+flambda/lib/base
 S /home/aldrik/.opam/4.08.1+flambda/lib/base/caml
 S /home/aldrik/.opam/4.08.1+flambda/lib/base/shadow_stdlib

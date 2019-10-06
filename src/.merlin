@@ -3,7 +3,7 @@ B /home/aldrik/.opam/4.08.1+flambda/lib/base
 B /home/aldrik/.opam/4.08.1+flambda/lib/base/caml
 B /home/aldrik/.opam/4.08.1+flambda/lib/base/shadow_stdlib
 B /home/aldrik/.opam/4.08.1+flambda/lib/sexplib0
-B ../../../../_build/default/kata/ocaml/fizzbuzz/src/.fizzbuzz.objs/byte
+B ../_build/default/src/.fizzbuzz.objs/byte
 S /home/aldrik/.opam/4.08.1+flambda/lib/base
 S /home/aldrik/.opam/4.08.1+flambda/lib/base/caml
 S /home/aldrik/.opam/4.08.1+flambda/lib/base/shadow_stdlib
