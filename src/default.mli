@@ -1,2 +1,2 @@
 val empty : String.t
-val apply_if_empty : int -> String.t -> String.t
+val return_if_no_answer : int -> String.t -> String.t

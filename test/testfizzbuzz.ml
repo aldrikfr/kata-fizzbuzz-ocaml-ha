@@ -3,11 +3,8 @@ open Base
 
 let play = Fizzbuzz.(play FizzBuzz)
 
-let assert_string desc expected result =
-    desc >:: (fun ctxt -> assert_equal ~cmp:String.equal ~printer:Fn.id ~ctxt expected result)
-
 let test_play desc expected param =
-    assert_string (desc ^ " rule with " ^ (Int.to_string param)) expected (play param)
+    Play.assert_string (desc ^ " rule with " ^ (Int.to_string param)) expected (play param)
 
 let () =
   "suite FizzBuzz 1" >::: [

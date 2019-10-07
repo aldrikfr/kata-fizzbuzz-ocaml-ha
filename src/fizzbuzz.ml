@@ -1,21 +1,16 @@
 open Base
-module D = Default
-module M = Modulo
 
-type t = FizzBuzz | FizzBuzzBang
+type t =
+  | FizzBuzz
+  | FizzBuzzBang
 
-let data_from = function
-  | FizzBuzz ->
-      [(3, "Fizz"); (5, "Buzz")]
-  | FizzBuzzBang ->
-      [(3, "Fizz"); (5, "Buzz"); (7, "Bang")]
+let description_from = function
+  | FizzBuzz     -> [(3, "Fizz"); (5, "Buzz")             ]
+  | FizzBuzzBang -> [(3, "Fizz"); (5, "Buzz"); (7, "Bang")]
 
-let create_modulo_rules = List.map ~f:M.create
-
-let apply_rules_on n = List.fold ~f:(M.apply n) ~init:D.empty
-
-let play conf number =
-  data_from conf
-  |> create_modulo_rules
-  |> apply_rules_on number
-  |> D.apply_if_empty number
+let play game_kind number =
+  game_kind
+  |> description_from
+  |> List.map  ~f: Modulo.create_rule
+  |> List.fold ~f:(Modulo.apply number) ~init:Default.empty
+  |> Default.return_if_no_answer number
