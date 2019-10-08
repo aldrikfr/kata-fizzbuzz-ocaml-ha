@@ -8,9 +8,9 @@ let description_from = function
   | FizzBuzz     -> [(3, "Fizz"); (5, "Buzz")             ]
   | FizzBuzzBang -> [(3, "Fizz"); (5, "Buzz"); (7, "Bang")]
 
+let apply_rule n acc = Modulo.(Fn.compose (apply n acc ) create_rule)
+
 let play game_kind number =
-  game_kind
-  |> description_from
-  |> List.map  ~f: Modulo.create_rule
-  |> List.fold ~f:(Modulo.apply number) ~init:Default.empty
+  description_from game_kind
+  |> List.fold ~f:(apply_rule number) ~init:Default.empty
   |> Default.return_if_no_answer number
