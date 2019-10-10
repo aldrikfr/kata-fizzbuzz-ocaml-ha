@@ -1,14 +1,14 @@
 open Base
 
-type t =
-  | FizzBuzz
-  | FizzBuzzBang
+type t = FizzBuzz | FizzBuzzBang
 
 let description_from = function
-  | FizzBuzz     -> [(3, "Fizz"); (5, "Buzz")             ]
-  | FizzBuzzBang -> [(3, "Fizz"); (5, "Buzz"); (7, "Bang")]
+  | FizzBuzz ->
+      [(3, "Fizz"); (5, "Buzz")]
+  | FizzBuzzBang ->
+      [(3, "Fizz"); (5, "Buzz"); (7, "Bang")]
 
-let apply_rule n acc = Modulo.(Fn.compose (apply n acc ) create_rule)
+let apply_rule n acc = Modulo.(Fn.compose (apply n acc) create_rule)
 
 let play game_kind number =
   description_from game_kind
